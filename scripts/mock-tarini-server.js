@@ -2,12 +2,12 @@ const { WebSocketServer } = require('ws');
 
 const wss = new WebSocketServer({ port: 8085 });
 
-console.log("Mock Telemachus WS server listening on ws://localhost:8085");
+console.log("Mock Tarini WS server listening on ws://localhost:8085");
 console.log("Waiting for Open MCT to connect...");
 
 wss.on('connection', function connection(ws) {
   let interval;
-  console.log("Client connected to mock Telemachus server.");
+  console.log("Client connected to mock Tarini server.");
 
   // Simulation state: starting on the launchpad
   let state = {
@@ -73,7 +73,7 @@ wss.on('connection', function connection(ws) {
                     state.monopropellant = Math.max(0, state.monopropellant - 0.05);
                     state.eccentricity = Math.min(1.0, state.apoapsis / 800000);
 
-                    // Build payload mimicking Telemachus format
+                    // Build payload mimicking Tarini format
                     let payload = {
                         't.universalTime': Date.now() / 1000,
                         'v.altitude': Math.max(0, state.altitude),

@@ -1,13 +1,13 @@
 /*global define*/
 
 define(
-    ['./KerbalTelemetrySeries'],
-    function (KerbalTelemetrySeries) {
+    ['./TariniTelemetrySeries'],
+    function (TariniTelemetrySeries) {
         "use strict";
 
-        var SOURCE = "kerbal.source";
+        var SOURCE = "tarini.source";
 
-        function KerbalTelemetryProvider(adapter, $q) {
+        function TariniTelemetryProvider(adapter, $q) {
             var subscribers = {};
 
             // Used to filter out requests for telemetry
@@ -21,7 +21,7 @@ define(
                 var packaged = {};
                 packaged[SOURCE] = {};
                 packaged[SOURCE][message.id] =
-                    new KerbalTelemetrySeries([message.value]);
+                    new TariniTelemetrySeries([message.value]);
                 (subscribers[message.id] || []).forEach(function (cb) {
                     cb(packaged);
                 });
@@ -35,7 +35,7 @@ define(
                     // Package historical telemetry that has been received
                     function addToPackage(history) {
                         packaged[SOURCE][history.id] =
-                            new KerbalTelemetrySeries(history.value);
+                            new TariniTelemetrySeries(history.value);
                     }
 
                     // Retrieve telemetry for a specific measurement
@@ -81,6 +81,6 @@ define(
             };
         }
 
-        return KerbalTelemetryProvider;
+        return TariniTelemetryProvider;
     }
 );

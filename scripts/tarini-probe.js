@@ -3,7 +3,7 @@ const http = require('http');
 const options = {
     hostname: 'localhost',
     port: 8085,
-    path: '/telemachus/datalink?v.altitude=v.altitude&v.orbitalVelocity=v.orbitalVelocity&o.ApA=o.ApA&o.PeA=o.PeA',
+    path: '/tarini/datalink?v.altitude=v.altitude&v.orbitalVelocity=v.orbitalVelocity&o.ApA=o.ApA&o.PeA=o.PeA',
     method: 'GET'
 };
 
@@ -26,7 +26,7 @@ function poll() {
 }
 
 let count = 0;
-console.log("Starting Telemachus REST probe...");
+console.log("Starting Tarini REST probe...");
 poll(); // Initial poll
 const interval = setInterval(() => {
     count++;

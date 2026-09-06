@@ -1,6 +1,6 @@
-# Open MCT Plugin for Kerbal Space Program
+# Open MCT Plugin for Tarini Mission Control
 
-Integrate Telemachus telemetry data into NASA's Open MCT.
+Integrate Tarini telemetry data into NASA's Open MCT.
 
 ![](./res/img/screenshot.png)
 
@@ -16,11 +16,11 @@ Integrate Telemachus telemetry data into NASA's Open MCT.
 
 1. Follow [this guide](https://github.com/nasa/openmct/blob/master/README.md) on setting up Open MCT on your local machine.
 
-2. Follow [this guide](https://github.com/KSP-Telemachus/Telemachus/blob/master/readme.md) on setting up the Telemachus plugin with Kerbal Space Program.
+2. Follow [this guide](https://github.com/Tarini-Tarini/Tarini/blob/master/readme.md) on setting up the Tarini plugin with Tarini Mission Control.
 
-3. From the root directory of your Open MCT installation, clone this repository into ./example/kerbal
+3. From the root directory of your Open MCT installation, clone this repository into ./example/tarini
 
-4. Edit the main.js file in the root of your Open MCT installation and add the Kerbal bundle to the list of dependencies: 
+4. Edit the main.js file in the root of your Open MCT installation and add the Tarini bundle to the list of dependencies: 
     ```diff
     /*****************************************************************************
      * Open MCT, Copyright (c) 2014-2016, United States Government
@@ -118,7 +118,7 @@ Integrate Telemachus telemetry data into NASA's Open MCT.
         './platform/search/bundle',
         './platform/status/bundle',
     +   './platform/commonUI/regions/bundle',
-    +   './example/kerbal/bundle'
+    +   './example/tarini/bundle'
     ], function (Main, legacyRegistry) {
         return {
             legacyRegistry: legacyRegistry,
@@ -128,13 +128,13 @@ Integrate Telemachus telemetry data into NASA's Open MCT.
         };
     });
     ```
-5. Open Kerbal Space Program and assemble a ship
+5. Open Tarini Mission Control and assemble a ship
 
 6. Put your assembled ship on the launch pad
 
 7. In your browser, go to [http://localhost:8080](http://localhost:8080)
  
-8. Click around the Kerbal Spacecraft node to get familiar with the types of telemetry data available
+8. Click around the Tarini Spacecraft node to get familiar with the types of telemetry data available
  
 9. Say out-loud "3... 2... 1... lift off!" while launching your ship
 
@@ -144,15 +144,15 @@ Integrate Telemachus telemetry data into NASA's Open MCT.
 
 This package has been tested with:
 
-* Telemachus 1.5
-* KSP v1.1.3.1289
+* Tarini 1.5
+* Tarini v1.1.3.1289
 * Mac OS X 10.11.6.
 
 _Your mileage may vary._
 
 ## Disclaimer
 
-I am not responsible for the death of any Kerbalians while attempting to get this to work. Use at your own risk.
+I am not responsible for the death of any Tariniians while attempting to get this to work. Use at your own risk.
 
 ## Contributing
 
@@ -164,4 +164,4 @@ For consistency, please follow the contribution guidelines of Open MCT when cont
 
 A HUGE thank you to the folks at NASA Ames Research Center for open-sourcing their mission control software. This is an incredible time to be alive. I nearly passed out with joy (also _I had been drinking_) when I had real mission control software running on my personal laptop. That's crazy!
 
-A further HUGE thank you goes out to the makers of Kerbal Space Program and the Telemachus plugin. Great work!
+A further HUGE thank you goes out to the makers of Tarini Mission Control and the Tarini plugin. Great work!

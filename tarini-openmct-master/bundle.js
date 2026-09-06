@@ -1,46 +1,46 @@
 define([
     "../../../platform/commonUI/formats/src/FormatProvider",
-    "./src/KerbalTimeFormat",
-    './src/KerbalTelemetryServerAdapter.js',
-    './src/KerbalTelemetryInitializer.js',
-    './src/KerbalTelemetryModelProvider.js',
-    './src/KerbalTelemetryProvider.js',
+    "./src/TariniTimeFormat",
+    './src/TariniTelemetryServerAdapter.js',
+    './src/TariniTelemetryInitializer.js',
+    './src/TariniTelemetryModelProvider.js',
+    './src/TariniTelemetryProvider.js',
     'legacyRegistry'
 ], function (
     FormatProvider,
-    KerbalTimeFormat,
-    KerbalTelemetryServerAdapter,
-    KerbalTelemetryInitializer,
-    KerbalTelemetryModelProvider,
-    KerbalTelemetryProvider,
+    TariniTimeFormat,
+    TariniTelemetryServerAdapter,
+    TariniTelemetryInitializer,
+    TariniTelemetryModelProvider,
+    TariniTelemetryProvider,
     legacyRegistry) {
-    legacyRegistry.register("example/kerbal", {
-        "name": "Kerbal Telemetry Adapter",
+    legacyRegistry.register("example/tarini", {
+        "name": "Tarini Telemetry Adapter",
         "extensions": {
             "types": [
                 {
-                    "name": "Kerbal Spacecraft",
-                    "key": "kerbal.spacecraft",
+                    "name": "Tarini Spacecraft",
+                    "key": "tarini.spacecraft",
                     "cssclass": "icon-object"
                 },
                 {
                     "name": "Subsystem",
-                    "key": "kerbal.subsystem",
+                    "key": "tarini.subsystem",
                     "cssclass": "icon-object",
                     "model": {"composition": []}
                 },
                 {
                     "name": "Measurement",
-                    "key": "kerbal.measurement",
+                    "key": "tarini.measurement",
                     "cssclass": "icon-telemetry-panel",
                     "model": {"telemetry": {}},
                     "telemetry": {
-                        "source": "kerbal.source",
+                        "source": "tarini.source",
                         "domains": [
                             {
-                                "name": "Kerbal Time",
+                                "name": "Tarini Time",
                                 "key": "timestamp",
-                                "format": "kerbal"
+                                "format": "tarini"
                             }
                         ]
                     }
@@ -48,19 +48,19 @@ define([
             ],
             "roots": [
                 {
-                    "id": "kerbal:sc",
+                    "id": "tarini:sc",
                     "priority": "preferred",
                     "model": {
-                        "type": "kerbal.spacecraft",
-                        "name": "Kerbal Spacecraft",
+                        "type": "tarini.spacecraft",
+                        "name": "Tarini Spacecraft",
                         "composition": []
                     }
                 }
             ],
             "services": [
                 {
-                    "key": "kerbal.adapter",
-                    "implementation": KerbalTelemetryServerAdapter,
+                    "key": "tarini.adapter",
+                    "implementation": TariniTelemetryServerAdapter,
                     "depends": ["$q", "$http", "$interval", "KERBAL_HTTP_API_URL"]
                 }
             ],
@@ -68,31 +68,31 @@ define([
                 {
                     "key": "KERBAL_HTTP_API_URL",
                     "priority": "fallback",
-                    "value": "/proxyUrl?url=" + encodeURIComponent("http://localhost:8085/telemachus/datalink")
+                    "value": "/proxyUrl?url=" + encodeURIComponent("http://localhost:8085/tarini/datalink")
                 },
                 {
                     "key": "DEFAULT_TIME_FORMAT",
-                    "value": "kerbal"
+                    "value": "tarini"
                 }
             ],
             "runs": [
                 {
-                    "implementation": KerbalTelemetryInitializer,
-                    "depends": ["kerbal.adapter", "objectService"]
+                    "implementation": TariniTelemetryInitializer,
+                    "depends": ["tarini.adapter", "objectService"]
                 }
             ],
             "components": [
                 {
                     "provides": "modelService",
                     "type": "provider",
-                    "implementation": KerbalTelemetryModelProvider,
-                    "depends": ["kerbal.adapter", "$q"]
+                    "implementation": TariniTelemetryModelProvider,
+                    "depends": ["tarini.adapter", "$q"]
                 },
                 {
                     "provides": "telemetryService",
                     "type": "provider",
-                    "implementation": KerbalTelemetryProvider,
-                    "depends": ["kerbal.adapter", "$q"]
+                    "implementation": TariniTelemetryProvider,
+                    "depends": ["tarini.adapter", "$q"]
                 },
                 {
                     "provides": "formatService",
@@ -105,8 +105,8 @@ define([
             ],
             "formats": [
                 {
-                    "key": "kerbal",
-                    "implementation": KerbalTimeFormat
+                    "key": "tarini",
+                    "implementation": TariniTimeFormat
                 }
             ]
         }

@@ -1,17 +1,17 @@
 import dictionary from './dictionary.js';
 
-export default function KSPObjectProvider() {
+export default function TariniObjectProvider() {
     return {
         get: function (identifier) {
             if (identifier.key === 'root') {
                 return Promise.resolve({
                     identifier: identifier,
-                    name: 'KSP Telemetry',
+                    name: 'Tarini Telemetry',
                     type: 'folder',
                     location: 'ROOT',
                     composition: [
-                        { namespace: 'ksp', key: 'vessel' },
-                        { namespace: 'ksp', key: 'dashboards' }
+                        { namespace: 'tarini', key: 'vessel' },
+                        { namespace: 'tarini', key: 'dashboards' }
                     ]
                 });
             }
@@ -21,10 +21,10 @@ export default function KSPObjectProvider() {
                     identifier: identifier,
                     name: 'Pre-configured Layouts',
                     type: 'folder',
-                    location: 'ksp:root',
+                    location: 'tarini:root',
                     composition: [
-                        { namespace: 'ksp', key: 'ascent_plot' },
-                        { namespace: 'ksp', key: 'resources_plot' }
+                        { namespace: 'tarini', key: 'ascent_plot' },
+                        { namespace: 'tarini', key: 'resources_plot' }
                     ]
                 });
             }
@@ -34,14 +34,14 @@ export default function KSPObjectProvider() {
                     identifier: identifier,
                     name: 'Ascent Profile',
                     type: 'telemetry.plot.overlay',
-                    location: 'ksp:dashboards',
+                    location: 'tarini:dashboards',
                     composition: [
-                        { namespace: 'ksp', key: 'vessel' }
+                        { namespace: 'tarini', key: 'vessel' }
                     ],
                     configuration: {
                         series: [
-                            { identifier: { namespace: 'ksp', key: 'vessel' }, value: 'v.altitude' },
-                            { identifier: { namespace: 'ksp', key: 'vessel' }, value: 'v.surfaceVelocity' }
+                            { identifier: { namespace: 'tarini', key: 'vessel' }, value: 'v.altitude' },
+                            { identifier: { namespace: 'tarini', key: 'vessel' }, value: 'v.surfaceVelocity' }
                         ]
                     }
                 });
@@ -52,15 +52,15 @@ export default function KSPObjectProvider() {
                     identifier: identifier,
                     name: 'Vessel Resources',
                     type: 'telemetry.plot.stacked',
-                    location: 'ksp:dashboards',
+                    location: 'tarini:dashboards',
                     composition: [
-                        { namespace: 'ksp', key: 'vessel' }
+                        { namespace: 'tarini', key: 'vessel' }
                     ],
                     configuration: {
                         series: [
-                            { identifier: { namespace: 'ksp', key: 'vessel' }, value: 'r.resource[LiquidFuel]' },
-                            { identifier: { namespace: 'ksp', key: 'vessel' }, value: 'r.resource[Oxidizer]' },
-                            { identifier: { namespace: 'ksp', key: 'vessel' }, value: 'r.resource[ElectricCharge]' }
+                            { identifier: { namespace: 'tarini', key: 'vessel' }, value: 'r.resource[LiquidFuel]' },
+                            { identifier: { namespace: 'tarini', key: 'vessel' }, value: 'r.resource[Oxidizer]' },
+                            { identifier: { namespace: 'tarini', key: 'vessel' }, value: 'r.resource[ElectricCharge]' }
                         ]
                     }
                 });

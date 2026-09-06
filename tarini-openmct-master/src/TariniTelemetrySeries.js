@@ -4,7 +4,7 @@ define(
     function () {
         "use strict";
 
-        function KerbalTelemetrySeries(data) {
+        function TariniTelemetrySeries(data) {
             return {
                 getPointCount: function () {
                     return data.length;
@@ -19,6 +19,6 @@ define(
             };
         }
 
-        return KerbalTelemetrySeries;
+        return TariniTelemetrySeries;
     }
 );

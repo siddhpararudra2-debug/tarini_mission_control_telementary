@@ -4,7 +4,7 @@ define(
     function () {
         "use strict";
 
-        var PREFIX = "kerbal_tlm:",
+        var PREFIX = "tarini_tlm:",
             FORMAT_MAPPINGS = {
                 float: "number",
                 integer: "number",
@@ -12,7 +12,7 @@ define(
                 boolean: "string"
             };
 
-        function KerbalTelemetryModelProvider(adapter, $q) {
+        function TariniTelemetryModelProvider(adapter, $q) {
             var modelPromise, empty = $q.when({});
 
             // Check if this model is in our dictionary (by prefix)
@@ -33,7 +33,7 @@ define(
                 function addMeasurement(measurement) {
                     var format = FORMAT_MAPPINGS[measurement.type];
                     models[makeId(measurement)] = {
-                        type: "kerbal.measurement",
+                        type: "tarini.measurement",
                         name: measurement.name,
                         telemetry: {
                             key: measurement.identifier,
@@ -45,7 +45,7 @@ define(
                             }],
                             domains: [{
                                 key: "timestamp",
-                                name: "Kerbal Time",
+                                name: "Tarini Time",
                                 format: "number"
                             }]
                         }
@@ -57,7 +57,7 @@ define(
                     var measurements =
                         (subsystem.measurements || []);
                     models[makeId(subsystem)] = {
-                        type: "kerbal.subsystem",
+                        type: "tarini.subsystem",
                         name: subsystem.name,
                         composition: measurements.map(makeId)
                     };
@@ -81,6 +81,6 @@ define(
             };
         }
 
-        return KerbalTelemetryModelProvider;
+        return TariniTelemetryModelProvider;
     }
 );

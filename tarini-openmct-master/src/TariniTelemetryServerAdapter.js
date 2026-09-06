@@ -5,7 +5,7 @@ define(
     function () {
         "use strict";
 
-        function KerbalTelemetryServerAdapter($q, $http, $interval, apiUrl) {
+        function TariniTelemetryServerAdapter($q, $http, $interval, apiUrl) {
             var listeners = [],
                 histories = {},
                 greatestTimestamp = 0,
@@ -58,7 +58,7 @@ define(
             // Retrieve dictionary
             $http({
                 method: 'GET',
-                url: '/example/kerbal/res/dictionary.json'
+                url: '/example/tarini/res/dictionary.json'
             }).then(function(result) {
                 dictionary.resolve(result.data);
 
@@ -93,6 +93,6 @@ define(
             };
         }
 
-        return KerbalTelemetryServerAdapter;
+        return TariniTelemetryServerAdapter;
     }
 );

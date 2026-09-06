@@ -1,4 +1,4 @@
-export default class TelemachusTransport {
+export default class TariniTransport {
     constructor(url = 'ws://localhost:8085/datalink') {
         this.url = url;
         this.socket = null;
@@ -16,7 +16,7 @@ export default class TelemachusTransport {
         this.socket = new WebSocket(this.url);
         
         this.socket.onopen = () => {
-            console.log("Telemachus WebSocket connected");
+            console.log("Tarini WebSocket connected");
             this.reconnectAttempts = 0;
             if (this.subscriptions.size > 0) {
                 this._sendSubscription(Array.from(this.subscriptions));
@@ -62,7 +62,7 @@ export default class TelemachusTransport {
                     }
                 }
             } catch(e) {
-                console.error("Error parsing Telemachus message", e);
+                console.error("Error parsing Tarini message", e);
             }
         };
 
@@ -70,12 +70,12 @@ export default class TelemachusTransport {
             this.socket = null;
             let backoff = Math.min(30000, 1000 * Math.pow(2, this.reconnectAttempts));
             this.reconnectAttempts++;
-            console.log(`Telemachus WebSocket disconnected. Reconnecting in ${backoff/1000}s...`);
+            console.log(`Tarini WebSocket disconnected. Reconnecting in ${backoff/1000}s...`);
             this.reconnectTimeout = setTimeout(() => this.connect(), backoff);
         };
 
         this.socket.onerror = (err) => {
-            console.error("Telemachus WebSocket error:", err);
+            console.error("Tarini WebSocket error:", err);
             // onclose will be triggered automatically
         };
     }

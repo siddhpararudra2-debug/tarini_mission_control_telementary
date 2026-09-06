@@ -43,4 +43,4 @@ wss.on('connection', function connection(ws) {
   });
 });
 
-console.log("Mock Telemachus WS server listening on ws://localhost:8085");
+console.log("Mock Tarini WS server listening on ws://localhost:8085");

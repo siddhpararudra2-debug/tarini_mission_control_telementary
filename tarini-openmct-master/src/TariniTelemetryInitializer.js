@@ -4,10 +4,10 @@ define(
     function () {
         "use strict";
 
-        var TAXONOMY_ID = "kerbal:sc",
-            PREFIX = "kerbal_tlm:";
+        var TAXONOMY_ID = "tarini:sc",
+            PREFIX = "tarini_tlm:";
 
-        function KerbalTelemetryInitializer(adapter, objectService) {
+        function TariniTelemetryInitializer(adapter, objectService) {
             // Generate a domain object identifier for a dictionary element
             function makeId(element) {
                 return PREFIX + element.identifier;
@@ -44,6 +44,6 @@ define(
             adapter.dictionary().then(initializeTaxonomy);
         }
 
-        return KerbalTelemetryInitializer;
+        return TariniTelemetryInitializer;
     }
 );

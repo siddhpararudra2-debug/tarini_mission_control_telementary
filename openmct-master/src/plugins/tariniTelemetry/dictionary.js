@@ -1,10 +1,10 @@
 export default {
-    name: 'KSP Vessel',
+    name: 'Tarini Vessel',
     identifier: {
-        namespace: 'ksp',
+        namespace: 'tarini',
         key: 'vessel'
     },
-    type: 'ksp.telemetry',
+    type: 'tarini.telemetry',
     telemetry: {
         values: [
             {
