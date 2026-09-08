@@ -13,7 +13,15 @@ export default class TariniTransport {
 
     connect() {
         if (this.socket) return;
-        this.socket = new WebSocket(this.url);
+        try {
+            this.socket = new WebSocket(this.url);
+        } catch (err) {
+            console.warn(`[Tarini] Unable to connect to WebSocket at ${this.url}:`, err);
+            if (typeof window !== 'undefined' && window.location?.protocol === 'https:' && this.url.startsWith('ws://')) {
+                console.warn("[Tarini] Note: Browser blocked insecure 'ws://' connection from an HTTPS page (Mixed Content). Use a secure 'wss://' tunnel/endpoint or pass ?ws=wss://... in the URL.");
+            }
+            return;
+        }
         
         this.socket.onopen = () => {
             console.log("Tarini WebSocket connected");

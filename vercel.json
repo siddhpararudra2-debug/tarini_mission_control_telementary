@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm --prefix openmct-master run build:prod",
+  "outputDirectory": "openmct-master/dist",
+  "installCommand": "npm --prefix openmct-master install",
+  "cleanUrls": true
+}
