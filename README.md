@@ -1,5 +1,10 @@
 # Tarini Mission Control Telemetry 🚀
 
+[![Vercel](https://img.shields.io/badge/Vercel-Live%20Demo-black?logo=vercel&style=for-the-badge)](https://tarini-seven.vercel.app)
+[![NASA Open MCT](https://img.shields.io/badge/Powered%20By-NASA%20Open%20MCT-blue?style=for-the-badge)](https://nasa.github.io/openmct/)
+
+> 🌐 **Live Web Dashboard:** [https://tarini-seven.vercel.app](https://tarini-seven.vercel.app)
+
 A real-time, comprehensive web-based mission control dashboard for Tarini Mission Control (Tarini), built on top of [NASA's Open MCT (Open Mission Control Technologies)](https://nasa.github.io/openmct/).
 
 This project integrates Tarini Mission Control with Open MCT via a custom WebSocket transport layer, allowing you to stream live flight telemetry, visualize orbital mechanics, and scroll back in time to review past mission data—just like a real space agency.
@@ -47,7 +52,8 @@ npm start
 ```
 
 ### 4. Open the Dashboard in Your Browser
-Open your web browser (Chrome, Firefox, etc.) and navigate to: [http://localhost:8080](http://localhost:8080). You will see your custom Open MCT mission control layout load up.
+- **Live Vercel App**: [https://tarini-seven.vercel.app](https://tarini-seven.vercel.app) *(Tip: Append `?ws=wss://...` to connect to custom/tunneled telemetry endpoints)*
+- **Local Dev Server**: [http://localhost:8080](http://localhost:8080) *(or port configured in webpack dev server)*
 
 ### 5. Build a Custom Dashboard
 You can use the pre-configured layouts in the **Dashboards** folder, or build your own:

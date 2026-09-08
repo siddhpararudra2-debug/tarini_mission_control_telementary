@@ -18,8 +18,8 @@ npm start
 ```
 
 ### 4. Open the Dashboard in Your Browser
-**http://localhost:8080**  
-Open your web browser (Chrome, Firefox, etc.) and navigate to: http://localhost:8080. You will see your custom Open MCT mission control layout load up.
+- **Live Vercel App**: [https://tarini-seven.vercel.app](https://tarini-seven.vercel.app)
+- **Local Dashboard**: [http://localhost:8080](http://localhost:8080) (Open your web browser and navigate to the address). You will see your custom Open MCT mission control layout load up.
 
 ### 5. Arrange Windows Side-by-Side
 **Visual setup.**  
