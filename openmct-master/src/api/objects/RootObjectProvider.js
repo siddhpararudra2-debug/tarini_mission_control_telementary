@@ -35,7 +35,7 @@ class RootObjectProvider {
           key: 'ROOT',
           namespace: ''
         },
-        name: 'Open MCT',
+        name: 'Tarini',
         type: 'root'
       };
       RootObjectProvider.instance = this;

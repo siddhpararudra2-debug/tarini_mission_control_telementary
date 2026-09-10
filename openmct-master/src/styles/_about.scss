@@ -28,34 +28,15 @@
   background-image: url('../ui/layout/assets/images/bg-splash.jpg');
   margin-top: 30px; // Don't overlap with close "X" button
 
-  &:before,
   &:after {
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    background-image: url('../ui/layout/assets/images/logo-openmct-shdw.svg');
+    background-image: url('../ui/layout/assets/images/logo-tarini-shdw.svg');
     background-size: contain;
     content: '';
-  }
-
-  &:before {
-    // NASA logo, dude
-    $w: 5%;
-    $m: 10px;
-    background-image: url('../ui/layout/assets/images/logo-nasa.svg');
-    top: $m;
-    right: auto;
-    bottom: auto;
-    left: $m;
-    height: auto;
-    width: $w * 2;
-    padding-bottom: $w;
-    padding-top: $w;
-  }
-
-  &:after {
     // App logo
-    $d: 25%;
+    $d: 20%;
     top: $d;
     right: $d;
     bottom: $d;

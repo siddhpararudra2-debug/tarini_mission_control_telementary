@@ -1038,28 +1038,9 @@ body.desktop {
   right: 0;
   bottom: 0;
   left: 0;
-  &:before,
   &:after {
     background-size: contain;
     content: '';
-  }
-
-  &:before {
-    // NASA logo, dude
-    $w: 5%;
-    $m: 10px;
-    background-image: url('../ui/layout/assets/images/logo-nasa.svg');
-    top: $m;
-    right: auto;
-    bottom: auto;
-    left: $m;
-    height: auto;
-    width: $w * 2;
-    padding-bottom: $w;
-    padding-top: $w;
-  }
-
-  &:after {
     // App logo
     top: 0;
     right: 15%;
@@ -1088,18 +1069,6 @@ body.desktop {
     @include splashElem(0);
     border-radius: 0;
     box-shadow: none;
-  }
-}
-
-@media only screen and (max-device-width: 767px) and (orientation: portrait) {
-  .l-splash-holder .l-splash {
-    &:before {
-      // Make the NASA logo a bit bigger when we're in portrait mode.
-      $w: 12%;
-      width: $w * 2;
-      padding-bottom: $w;
-      padding-top: $w;
-    }
   }
 }
 

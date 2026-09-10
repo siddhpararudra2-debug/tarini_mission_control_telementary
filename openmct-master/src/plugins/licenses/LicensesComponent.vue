@@ -21,7 +21,7 @@
 -->
 <template>
   <div class="c-about c-about--licenses">
-    <h1>Open MCT Third Party Licenses</h1>
+    <h1>Tarini Third Party Licenses</h1>
     <p>This software includes components released under the following licenses:</p>
     <div v-for="(pkg, key) in packages" :key="key" class="c-license">
       <h2 class="c-license__name">

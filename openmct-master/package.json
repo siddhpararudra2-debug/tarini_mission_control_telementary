@@ -1,7 +1,7 @@
 {
-  "name": "openmct",
+  "name": "tarini",
   "version": "4.3.1",
-  "description": "The Open MCT core platform",
+  "description": "Tarini Mission Control core platform",
   "module": "dist/openmct.js",
   "main": "dist/openmct.js",
   "types": "dist/types/index.d.ts",
@@ -134,11 +134,7 @@
     "update-copyright-date": "npm run update-about-dialog-copyright && grep -lr --null --include=*.{js,scss,vue,ts,sh,html,md,frag} 'Copyright (c) 20' . | xargs -r0 perl -pi -e 's/Copyright\\s\\(c\\)\\s20\\d\\d\\-20\\d\\d/Copyright \\(c\\)\\ 2014\\-2024/gm'",
     "cov:e2e:report": "nyc report --reporter=lcovonly --report-dir=./coverage/e2e"
   },
-  "homepage": "https://nasa.github.io/openmct",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nasa/openmct.git"
-  },
+  "homepage": "https://tarini-seven.vercel.app",
   "overrides": {
     "@typescript-eslint/typescript-estree": {
       "minimatch": "9.0.9"
@@ -153,11 +149,12 @@
     "Safari >= 16"
   ],
   "author": {
-    "name": "National Aeronautics and Space Administration",
-    "url": "https://www.nasa.gov"
+    "name": "Tarini Mission Control"
   },
   "license": "Apache-2.0",
   "keywords": [
-    "nasa"
+    "tarini",
+    "mission-control",
+    "telemetry"
   ]
 }

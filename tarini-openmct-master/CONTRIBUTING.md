@@ -1,1 +1,3 @@
-Please follow the same [guidelines provided by Open MCT](https://github.com/nasa/openmct/blob/master/CONTRIBUTING.md)
+# Contributing to Tarini Mission Control
+
+Please submit contributions via issues or pull requests.

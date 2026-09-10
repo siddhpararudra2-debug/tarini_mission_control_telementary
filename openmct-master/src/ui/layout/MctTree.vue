@@ -66,9 +66,9 @@
           <span class="c-tree__item__view-control c-nav__up is-enabled"></span>
           <a class="c-tree__item__label c-object-label" draggable="true" href="#">
             <div class="c-tree__item__type-icon c-object-label__type-icon icon-folder">
-              <span title="Open MCT"></span>
+              <span title="Tarini"></span>
             </div>
-            <div class="c-tree__item__name c-object-label__name">Open MCT</div>
+            <div class="c-tree__item__name c-object-label__name">Tarini</div>
           </a>
           <span class="c-tree__item__view-control c-nav__down"></span>
         </div>

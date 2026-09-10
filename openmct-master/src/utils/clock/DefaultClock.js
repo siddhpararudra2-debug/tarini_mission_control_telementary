@@ -33,7 +33,7 @@ export default class DefaultClock extends EventEmitter {
     this.key = 'clock';
     this.cssClass = 'icon-clock';
     this.name = 'Clock';
-    this.description = 'A default clock for openmct.';
+    this.description = 'A default clock for Tarini.';
   }
 
   tick(tickValue) {

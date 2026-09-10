@@ -2,7 +2,7 @@
   "name": "tarini-mission-control",
   "version": "1.0.0",
   "private": true,
-  "description": "Tarini Mission Control Telemetry dashboard powered by NASA Open MCT",
+  "description": "Tarini Mission Control Telemetry Dashboard",
   "scripts": {
     "build": "npm --prefix openmct-master run build:prod",
     "start": "npm --prefix openmct-master start"

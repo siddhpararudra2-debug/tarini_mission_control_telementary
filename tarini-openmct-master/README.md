@@ -1,6 +1,6 @@
-# Open MCT Plugin for Tarini Mission Control
+# Tarini Mission Control Telemetry Plugin
 
-Integrate Tarini telemetry data into NASA's Open MCT.
+Integrate telemetry data into Tarini Mission Control.
 
 ![](./res/img/screenshot.png)
 
@@ -14,7 +14,7 @@ Integrate Tarini telemetry data into NASA's Open MCT.
 
 ## Getting Started
 
-1. Follow [this guide](https://github.com/nasa/openmct/blob/master/README.md) on setting up Open MCT on your local machine.
+1. Follow the setup guide to set up the dashboard on your local machine.
 
 2. Follow [this guide](https://github.com/Tarini-Tarini/Tarini/blob/master/readme.md) on setting up the Tarini plugin with Tarini Mission Control.
 
@@ -162,6 +162,6 @@ For consistency, please follow the contribution guidelines of Open MCT when cont
 
 ## Thanks
 
-A HUGE thank you to the folks at NASA Ames Research Center for open-sourcing their mission control software. This is an incredible time to be alive. I nearly passed out with joy (also _I had been drinking_) when I had real mission control software running on my personal laptop. That's crazy!
+Thank you to everyone in the open-source space community for making accessible mission control tools.
 
-A further HUGE thank you goes out to the makers of Tarini Mission Control and the Tarini plugin. Great work!
+A further thank you goes out to the creators of Tarini Mission Control. Great work!

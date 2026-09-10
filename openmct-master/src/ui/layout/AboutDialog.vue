@@ -22,7 +22,7 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
   <div class="c-about c-about--splash">
-    <div class="c-about__image c-splash-image" role="img" alt="Open MCT Splash Logo"></div>
+    <div class="c-about__image c-splash-image" role="img" alt="Tarini Splash Logo"></div>
     <div class="c-about__text s-text">
       <div
         v-if="branding.aboutHtml"
@@ -30,14 +30,13 @@
         v-html="branding.aboutHtml"
       ></div>
       <div class="c-about__text__element">
-        <h1 class="l-title s-title">Open MCT</h1>
+        <h1 class="l-title s-title">Tarini Mission Control</h1>
         <div class="l-description s-description">
           <p>
-            Open MCT, Copyright &copy; 2014-2024, United States Government as represented by the
-            Administrator of the National Aeronautics and Space Administration. All rights reserved.
+            Tarini Mission Control Telemetry Dashboard. All rights reserved.
           </p>
           <p>
-            Open MCT is licensed under the Apache License, Version 2.0 (the "License"); you may not
+            Tarini is licensed under the Apache License, Version 2.0 (the "License"); you may not
             use this file except in compliance with the License. You may obtain a copy of the
             License at
             <a
@@ -54,7 +53,7 @@
             permissions and limitations under the License.
           </p>
           <p>
-            Open MCT includes source code licensed under additional open source licenses. See the
+            Tarini includes source code licensed under additional open source licenses. See the
             Open Source Licenses file included with this distribution or
             <a @click="showLicenses">click here for third party licensing information</a>.
           </p>

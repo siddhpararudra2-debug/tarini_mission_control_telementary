@@ -21,7 +21,7 @@
 -->
 
 <template>
-  <div ref="GrandSearch" aria-label="OpenMCT Search" class="c-gsearch" role="search">
+  <div ref="GrandSearch" aria-label="Tarini Search" class="c-gsearch" role="search">
     <SearchResultsDropDown ref="searchResultsDropDown" />
     <Search
       ref="shell-search"
